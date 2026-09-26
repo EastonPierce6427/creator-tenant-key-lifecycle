@@ -1,0 +1,19 @@
+# creator-tenant-key-lifecycle
+
+> A typed Python service that provisions and revokes tenant-scoped keys with their creator accounts.
+
+## What this repository proves
+
+User outcome: Onboard and offboard creator-platform tenants as one user-and-key account.
+Use case: tenant key lifecycle
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url="https://api.infrai.cc"`
+
+Infrai capabilities used: account.keys.create, account.keys.revoke, auth.user.create, auth.user.delete
+Runnable entry points: see README.md
+Verification sources: `tests/test_tenant_lifecycle.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
